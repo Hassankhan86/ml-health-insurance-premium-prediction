@@ -1,0 +1,179 @@
+# 🧠 Annual Health Insurance Premium Prediction (Regression ML Project)
+
+## 📌 Project Overview
+
+This project focuses on predicting **annual insurance premium amounts** using machine learning regression models.
+It involves complete data processing, feature engineering, model training, and deployment using **Streamlit**.
+
+
+---
+## ⚡ Installation & Setup
+
+Follow these steps to run the project locally:
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
+```
+
+### 2️⃣ Create virtual environment (recommended)
+
+```bash
+python -m venv venv
+venv\Scripts\activate   # For Windows
+```
+
+### 3️⃣ Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4️⃣ Run the Streamlit app
+
+```bash
+streamlit run app.py
+```
+
+
+---
+
+## 📊 Dataset Features
+
+The dataset contains the following columns:
+
+* Age
+* Gender
+* Region
+* Marital_Status
+* Number_Of_Dependants
+* BMI_Category
+* Smoking_Status
+* Employment_Status
+* Income_Level
+* Income_Lakhs
+* Medical_History
+* Insurance_Plan
+* Annual_Premium_Amount (Target Variable)
+
+---
+
+## 🧹 Data Cleaning
+
+Performed the following preprocessing steps:
+
+* Handled **missing values**
+* Removed **duplicate records**
+* Detected and removed **outliers** in:
+
+  * Age
+  * Income_Lakhs
+* Used **IQR (Interquartile Range)** method to define:
+
+  * Upper Bound
+  * Lower Bound
+
+---
+
+## 📈 Exploratory Data Analysis (EDA)
+
+### 🔹 Univariate Analysis
+
+* Distribution of categorical features
+* Frequency analysis
+
+### 🔹 Bivariate Analysis
+
+* Relationship between features and target variable
+
+### 🔹 Multivariate Analysis
+
+* Interaction between multiple variables affecting premium
+
+---
+
+## ⚙️ Feature Engineering
+
+* Created a new feature:
+
+  * **Total_Risk_Score** (based on Medical_History)
+
+* Applied **encoding techniques**:
+  * Categorical features → Encoded
+  * Numerical features → Scaled
+
+* Checked **Multicollinearity** using:
+
+  * **VIF (Variance Inflation Factor)**
+
+* Dropped columns with **high VIF values**
+
+---
+
+## 🤖 Model Training
+
+### 🔹 Data Splitting
+
+* Used `train_test_split` for training and testing datasets
+
+### 🔹 Models Applied
+
+* Linear Regression
+* Ridge Regression
+* LassoCV
+* ElasticNetCV
+* XGBRegressor (RandomizedSearchCV)
+* XGBRegressor (GridSearchCV)
+
+### 🔹 Model Selection
+
+* Selected the best model(XGBRegressor with GridSearchCV) based on performance metrics
+
+---
+
+## 📉 Model Evaluation
+
+Performed error analysis using:
+
+* Actual vs Predicted comparison
+* Residuals (Difference between actual and predicted)
+* Percentage Error
+
+---
+
+## 🔁 Iteration & Improvement
+
+* Revisited **EDA and Data Cleaning**
+* Reduced data errors
+* Improved model performance
+* Added new column Genetical_Risk
+---
+
+## 🚀 Deployment
+
+* Built an interactive web application using **Streamlit**
+* Users can input data and get predicted insurance premium instantly
+
+---
+
+## 🛠️ Tech Stack
+
+* Python
+* Pandas, NumPy
+* Matplotlib, Seaborn
+* Scikit-learn
+* XGBoost
+* Streamlit
+
+---
+
+## 📌 Future Improvements
+
+* Add more real-world data
+* Improve feature engineering
+* Try advanced models (Deep Learning)
+* Deploy on cloud (AWS / Render / Streamlit Cloud)
+
+---

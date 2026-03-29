@@ -39,6 +39,7 @@ streamlit run main.py
 
 ## Web App Screenshot
 ![alt text](web-ss1.png)
+### After Prediction
 ![alt text](web-ss2.png)
 
 ---
